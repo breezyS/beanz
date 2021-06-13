@@ -31,7 +31,7 @@ class _ListSelectionScreenState extends State<ListSelectionScreen> {
   Widget build(BuildContext context) {
     Provider.of<ItemCount>(context, listen: false).updateCount();
     return Scaffold(
-      backgroundColor: Color(0xFF592116),
+      backgroundColor: Color(0xFF4C5DF5),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -58,13 +58,6 @@ class _ListSelectionScreenState extends State<ListSelectionScreen> {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 6.0),
-                  child: Text(
-                    'Du hast ${Provider.of<ItemCount>(context).itemCount} Einträge',
-                    style: kSubHeaderTextStyle,
-                  ),
-                )
               ],
             ),
           ),

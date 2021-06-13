@@ -21,11 +21,18 @@ class ListViewStream extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
             children: snapshot.data.documents.map((DocumentSnapshot document) {
               return Container(
-                key: Key(document.data['pos'].toString()),
-                child: Card(
-                  child: ListItem(
-                    itemTitle: document.data['item'],
+                margin: EdgeInsets.only(bottom: 5),
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.lightBlueAccent,
+                      width: 1,
+                    ),
                   ),
+                ),
+                key: Key(document.data['pos'].toString()),
+                child: ListItem(
+                  itemTitle: document.data['item'],
                 ),
               );
             }).toList(),

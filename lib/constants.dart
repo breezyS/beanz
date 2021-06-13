@@ -14,10 +14,10 @@ const kSubHeaderTextStyle = TextStyle(
 
 const kInputTextDecoration = InputDecoration(
   border: OutlineInputBorder(
-    borderSide: BorderSide(color: Color(0xFF592116)),
+    borderSide: BorderSide(color: Color(0xFF4C5DF5)),
   ),
   enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Color(0xFF592116)),
+    borderSide: BorderSide(color: Color(0xFF4C5DF5)),
   ),
   filled: true,
   fillColor: Colors.white,

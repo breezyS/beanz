@@ -64,6 +64,8 @@ class FirestoreService {
           .then((value) => print("Item Added"))
           .catchError((error) => print("Failed to add Item: $error"));
     }
+
+    localItemList.clear();
   }
 
   Future<void> createLocalList() async {

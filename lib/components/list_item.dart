@@ -21,13 +21,13 @@ class _ListItemState extends State<ListItem> {
     TextEditingController editController =
         TextEditingController(text: widget.itemTitle);
     return Container(
-      height: 45,
+      height: 40,
       child: ListTile(
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(12.0, 20, 8, 8),
+          padding: const EdgeInsets.fromLTRB(12.0, 7, 8, 8),
           child: Text(
             widget.itemTitle,
-            style: TextStyle(height: 0, fontSize: 25),
+            style: TextStyle(height: 0, fontSize: 20),
           ),
         ),
         trailing: SizedBox(
@@ -36,12 +36,13 @@ class _ListItemState extends State<ListItem> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
+                padding: EdgeInsets.fromLTRB(25, 0, 0, double.infinity),
                 onPressed: () {
                   Alert(
                     context: context,
                     title: '${widget.itemTitle} bearbeiten!',
                     content: Container(
-                      height: 50,
+                      height: 40,
                       child: TextField(
                         controller: editController,
                         cursorHeight: 20,
@@ -49,23 +50,23 @@ class _ListItemState extends State<ListItem> {
                         cursorWidth: 1,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF592116)),
+                            borderSide: BorderSide(color: Color(0xFF4C5DF5)),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF592116)),
+                            borderSide: BorderSide(color: Color(0xFF4C5DF5)),
                           ),
                           filled: true,
                           fillColor: Colors.white,
                           hintText: '',
                           hintStyle: TextStyle(color: Colors.grey),
                         ),
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 25, height: 2.2),
                         textAlign: TextAlign.center,
                       ),
                     ),
                     buttons: [
                       DialogButton(
-                        color: Color(0xFF592116),
+                        color: Color(0xFF4C5DF5),
                         child: Text(
                           "Speichern",
                           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -88,6 +89,7 @@ class _ListItemState extends State<ListItem> {
                 ),
               ),
               IconButton(
+                padding: EdgeInsets.fromLTRB(8, 0, 0, double.infinity),
                 onPressed: () {
                   Provider.of<ItemCount>((context), listen: false)
                       .updateCount();

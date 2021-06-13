@@ -37,7 +37,7 @@ class _InputTextWidgetState extends State<InputTextWidget> {
           },
           icon: Icon(
             Icons.send,
-            color: Colors.green,
+            color: Colors.lightBlueAccent,
           ),
         ),
       ),
